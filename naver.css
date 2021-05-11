@@ -1,9 +1,9 @@
-* { /* * <- 에스터리스크 라고 부르는데 모든 태그에 적용이라는 기능을 가짐*/
-    box-sizing: border-box; /* 모든 태그에 border-box 적용 */
+* {
+    box-sizing: border-box;
 }
 
 
-.blind { /* .은 클래스 */
+.blind {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
@@ -12,70 +12,68 @@
     overflow: hidden;
 }
 
-/* 1번 */
-#header-center{ /* 여기서 div는 생략가능! ex) #header-center
-                       단 div만 가능하다. header#mins -> #mins(x) */
+
+#header-center {
     margin: 0 auto;
     width: 1190px;
 }
-/*
-    만약 같은 내용의 css 디자인이 들어간다면!
-    div#header-center , div#mins{ ,를 찍고 옆에 적어주면 된다.
-    margin: 0 auto;
-    width: 1130px;
-    }
-*/
 
-/* 2번 */
-#header-search h1 { /* div 내에서 자식(바로안에 들어있는것)을 찾고 싶다면 mins > h1 방식을 사용*/
-    /* 자손 <- 그외 자식, 손자, 증손자 등등 */
-    /* a 태그와 h1 태그 교체이후 설명
-    header-search 바로 직졔 자식은 h1 태그였으나 a태그가 이를 감싸면서 h1태그는
-    자식이 아닌 자손이 되었음! 따라서 ">" 표시을 제거해야함 (자손과 자식의 차이)*/
+#header-search h1 {
     display: inline-block;
     width: 222px;
-    height: 51px;
-    background: url(./sp_main_16ad06.png)  0 -158px no-repeat;
-    background-size: 440px 410px;
-    text-indent: 110%;
-    overflow: hidden; /* 밖으로 나간 친구들 안보이게 ㅋㅋ 꼼수 */
+    height: 52px;
+    background: url(./sp_main_16ad06.png) 0 -158px no-repeat;
+    background-size: 433px 409px;
+    text-indent: 110%; /*추가*/
+    overflow: hidden;
+    vertical-align: middle;
 }
 
 #header-search a {
     text-decoration: none;
 }
 
-/* 4번 */
-
 #header-search fieldset {
+
+    position: relative; /* 5번*/
+    margin-left: 20px;
     width: 582px;
-    height: 52px;
+    height: 56px;
     display: inline-block;
-    border-bottom: 1px solid #e4e8eb;
+    border: 2px solid #19ce60;
+    border-radius: 2px;
+    vertical-align: middle; /* 로고와 검색창의 크기를 맞춤*/
+    padding: 13px 15px;
+
 }
 
 #header-search fieldset input {
+
     border: none;
+    outline: none; /* css는 외우는 것 */ /*눌럿을때 뭔가 배경같은게 나오는게 아웃라인 더러워 보이니까 논으로 지우자 */
     width: 444px;
     height: 24px;
-    padding: 17px 15px;
     margin: 1px;
-    background-color: #fff;
+    padding: 0;
     font-size: 18px;
     line-height: 24px;
     color: #000;
     font-weight: 700;
-    outline: 0;
 }
 
 #header-search fieldset button {
-    background-color: #19ce60;
+    position: absolute;
+    right: -2px;
+    top: -2px;
     width: 56px;
     height: 56px;
-border: none;
+    border: none;
     padding: 0;
-
+    background: #19ce60;
 }
+
+
+
 
 #search-image {
     background: url(./sp_main_16ad06.png) -270px -342px no-repeat;
@@ -85,6 +83,113 @@ border: none;
     vertical-align: top;
     background-size: 433px 409px;
 }
+#search-keyboard{
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    margin: -6px 0 0 -10px;
+    background: url(./sp_main_16ad06.png) -160px -327px no-repeat;
+    background-size: 433px 409px;
+
+}
+
+#search-history{
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    vertical-align: top;
+    background: url(./sp_main_16ad06.png) -408px -128px no-repeat;
+    background-size: 433px 409px;
+    margin: 10px 8px;
+
+}
+
+.center-align {
+    margin: 0 auto;
+    width: 1190px;
+}
+
+nav{
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li span:first-child {
+    height: 20px;
+    display: inline-block;
+    background: url(./sp_nav.png);
+    background-repeat: no-repeat;
+
+}
+
+nav li:nth-child(2) span:first-child {
+    width: 40px;
+    background-position: -279px ;
+}
+
+nav li:nth-child(3) span:first-child {
+    width: 40px;
+    background-position: -100px -182px;
+}
+nav li:nth-child(4) span:first-child {
+    width: 40px;
+    background-position: -101px -156px;
+}
+nav li:nth-child(5) span:first-child {
+    width: 26px;
+    background-position: -279px -156px;
+}
+nav li:nth-child(6) span:first-child {
+    width: 25px;
+    background-position: -70px -285px;
+}
+nav li:nth-child(7) span:first-child {
+    width: 35px;
+    background-position: -125px -130px;
+}
+nav li:nth-child(8) span:first-child {
+    margin-left: 16px;
+    width: 26px;
+    background-position: -279px -208px;
+}
+nav li:nth-child(9) span:first-child {
+    width: 26px;
+    background-position: -128px -104px;
+}
+nav li:nth-child(10) span:first-child {
+    width: 26px;
+    background-position: -36px -259px;
+}
+nav li:nth-child(11) span:first-child {
+    width: 39px;
+    background-position: -151px -156px;
+}
+nav li:nth-child(12) span:first-child {
+    width: 26px;
+    background-position: -279px -130px;
+}
+nav li:nth-child(13) span:first-child {
+    width: 28px;
+    background-position: -234px -233px;
+}
+nav li:nth-child(14) span:first-child {
+    width: 30px;
+    background-position: -195px -233px;
+}
+nav li:nth-child(15) span:first-child {
+    width: 13px;
+    background-position: -140px -78px;
+}
+nav li:nth-child(16) span:first-child {
+    width: 26px;
+    background-position: -279px 0;
+}
+
 
 
 /*
