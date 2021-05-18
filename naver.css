@@ -111,7 +111,17 @@
     width: 1190px;
 }
 
-nav{
+
+nav {
+    height: 52px;
+    border-top: 1px solid #d1d8e4;
+    border-bottom: 1px solid #d1d8e4;
+    padding: 6px 70px;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -119,12 +129,18 @@ nav li {
     display: inline-block;
 }
 
+nav li:first-child span:first-child {
+    width: 25px;
+    background-position: 0 -285px;
+    margin-left: 0;
+}
+
 nav li span:first-child {
     height: 20px;
     display: inline-block;
-    background: url(./sp_nav.png);
+    background-image: url(./sp_nav.png);
     background-repeat: no-repeat;
-
+    margin-left: 14px;
 }
 
 nav li:nth-child(2) span:first-child {
@@ -190,7 +206,37 @@ nav li:nth-child(16) span:first-child {
     background-position: -279px 0;
 }
 
+nav li.more:first-child span:first-child {
+    width:50px;
+    background-position: 0 -104px;
+}
 
+
+.nav-divider {
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin:18px 10px 0;
+}
+
+header {
+    height: 160px;
+}
+
+#header-top{
+    float:right;
+}
+
+#header-top span{
+    font-size: 12px;
+    line-height: 16px;
+    color: #202020;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+}
+
+#header-search{
+    clear: both;
+}
 
 /*
 .blind {
